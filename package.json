@@ -1,8 +1,8 @@
 {
   "name": "newhomework",
-  "homepage": "https://kibeshev87.github.io/homework-it-incubator",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://kibeshev87.github.io/homework-it-incubator",
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
