@@ -1,0 +1,15 @@
+.App {
+    --header_height: 60px;
+}
+.wrapper {
+    margin: 131px 70px 216px;
+}
+
+.hw {
+
+}
+
+.hwTitle {
+    font-weight: 600;
+    font-size: 22px;
+}
