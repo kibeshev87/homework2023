@@ -1,10 +1,9 @@
 .friendMessage {
-    margin: 34px 635px 0px 0px  ;
+    margin: 34px 635px 0 0;
 }
 
 .friendImageAndText {
     display: flex;
-
 }
 
 .friendImageAndText img {
@@ -43,5 +42,5 @@
 
 
 .friendTime {
-    margin: 5px 695px 30px 7px;
+    margin: 5px; /*695px 30px 7px;*/
 }
