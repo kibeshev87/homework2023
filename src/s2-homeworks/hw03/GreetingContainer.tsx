@@ -1,8 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -64,7 +62,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // users.lenght???? need to fix
-    const lastUserName = users[users.length - 1] // users.lenght[-1] need to fix
+    const lastUserName = name // users.lenght[-1] need to fix
 
     return (
         <Greeting
