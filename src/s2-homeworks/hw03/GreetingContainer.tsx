@@ -1,17 +1,19 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
+import {Simulate} from "react-dom/test-utils";
+import error = Simulate.error;
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
     addUserCallback: (name: string) => void // need to fix any
 }
 
-export const pureAddUser = (name: string,
-                            setError: (error: string) => void,
-                            setName: (name: string) => void,
-                            addUserCallback: (name: string) => void) => {
-    if (name === ' ') {
+export const pureAddUser = (name: any,
+                            setError: any,
+                            setName: any,
+                            addUserCallback: any ) => {
+    if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
     } else {
         addUserCallback(name)
@@ -20,14 +22,14 @@ export const pureAddUser = (name: string,
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
-export const pureOnBlur = (name: string, setError: (error: string) => void) => {
-    if(name === ' '){
+export const pureOnBlur = (name: any, setError: any) => {
+    if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
     }// если имя пустое - показать ошибку
 }
 
-export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: any) => {
-    if(e.key === 'Enter') {
+export const pureOnEnter = (e: any, addUser: any) => {
+    if (e.key === 'Enter') {
         addUser()
     }// если нажата кнопка Enter - добавить
 }
@@ -57,12 +59,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnBlur(name, setError)
     }
 
-    const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+    const onEnter = (e: any) => {
         pureOnEnter(e, addUser)
     }
 
     const totalUsers = users.length // users.lenght???? need to fix
-    const lastUserName = users[users.length - 1].name // users.lenght[-1] need to fix
+    const lastUserName = users[users.length - 1] // users.lenght[-1] need to fix
 
     return (
         <Greeting
