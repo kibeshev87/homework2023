@@ -14,7 +14,7 @@ export const pureAddUser = (name: any,
     if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
     } else {
-        setError('')
+        setError(null)
         addUserCallback(name)
         setName('')
     }
@@ -22,7 +22,7 @@ export const pureAddUser = (name: any,
 }
 
 export const pureOnBlur = (name: any, setError: any) => {
-    setError('')
+    /*setError('')*/
     if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
     }// если имя пустое - показать ошибку
@@ -44,13 +44,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
                                                                  }) => {
     // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string>('') // need to fix any
+    const [error, setError] = useState<string | null>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        setError('')
+        setError(null)
         setName(e.currentTarget.value) // need to fix
 
-        error && setError('')
+        error && setError(null)
     }
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
