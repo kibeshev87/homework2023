@@ -1,7 +1,4 @@
 .sidebar {
-}
-
-.sidebar {
     z-index: 20;
     position: fixed;
     transition: 0.2s ease-in;
