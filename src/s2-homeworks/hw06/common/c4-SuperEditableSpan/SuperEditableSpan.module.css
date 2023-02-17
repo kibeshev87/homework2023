@@ -1,11 +1,26 @@
 .spanBlock {
+   /* border: 1px solid #ababde;*/
+    width: 900px;
+    background-color: #d0e7ff;
+    border-radius: 5px;
 }
 
 .span {
+    width: 976px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .input {
+    border: 1px solid orange;
+    border-radius: 20px;
+    /*border-style: none;*/
+    resize: none;
+    width: 976px;
+    padding: 10px;
+    color: red;
 }
 
 .pen {
+
 }

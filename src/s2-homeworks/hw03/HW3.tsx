@@ -28,7 +28,7 @@ export const pureAddUserCallback = (name: string, setUsers: (user: UserType[]) =
     setUsers([...users, user])
 }
 
-const HW3 = () => {
+const   HW3 = () => {
     const [users, setUsers] = useState<UserType[]>([]) // need to fix any
 
     const addUserCallback = (name: string) => {
@@ -36,7 +36,7 @@ const HW3 = () => {
     }
 
     return (
-        <div id={'hw3'}>
+        <div id={'hw3'} className={s2.wrapper}>
             <div className={s2.hwTitle}>Homework #3</div>
             {/*для автоматической проверки дз (не менять)*/}
 

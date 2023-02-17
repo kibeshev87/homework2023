@@ -1,6 +1,5 @@
-import React, {ChangeEvent, KeyboardEvent} from 'react'
+import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
-import {UserType} from "./HW3";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -46,18 +45,14 @@ const Greeting: React.FC<GreetingPropsType> = (
                         className={inputClass}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
+                        placeholder={'Type your message'}
                     />
                     <div id={'hw3-error'} className={s.error}>
                         {error}
                     </div>
                 </div>
 
-                <button
-                    id={'hw3-button'}
-                    onClick={addUser}
-                    className={s.button}
-                    disabled={!name.trim()}
-                >
+                <button id={'hw3-button'} onClick={addUser} className={s.button} disabled={!name.trim()}>
                     add
                 </button>
             </div>

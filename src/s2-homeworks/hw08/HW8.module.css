@@ -1,23 +1,38 @@
 .item {
+    margin: 20px;
 }
 
 .item:last-of-type {
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonsContainer {
+    margin-left: 200px;
 }
 
 .container {
 }
 
 .thead {
+    font-weight: 700;
+
+}
+table, th, td {
+    padding: 18px 160px 10px 0;
 }
 
 .nameCol {
+    
+}
+
+td span {
+    font-weight: 700;
 }
 
 .ageCol {
+
 }

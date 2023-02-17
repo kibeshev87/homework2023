@@ -1,5 +1,9 @@
 .buttonsContainer {
-}
+    /*border: 1px solid red;*/
 
+}
+#hw6-restore {
+    padding-left: 20px;
+}
 .editableSpanContainer {
 }

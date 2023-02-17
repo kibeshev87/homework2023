@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
-import {getActiveElement} from "@testing-library/user-event/dist/utils";
 
 type PropsType = {
     open: boolean
