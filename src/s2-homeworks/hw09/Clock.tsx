@@ -35,7 +35,7 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format(date)// часы24:минуты:секунды (01:02:03)
+    const stringTime = new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format(date)// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
 
     const stringDate = new Intl.DateTimeFormat('ru', {dateStyle: "short"}).format(date) // день.месяц.год (01.02.2022)
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
@@ -60,8 +60,8 @@ function Clock() {
                 <div className={s.more}>
                     {show ? (
                         <>
-                            <span id={'hw9-month'}>{stringDate}</span>,{' '}
-                            <span id={'hw9-date'}>{stringMonth}</span>
+                            <span id={'hw9-month'}>{stringMonth}</span>,{' '}
+                            <span id={'hw9-date'}>{stringDate}</span>
                         </>
                     ) : (
                         <>
