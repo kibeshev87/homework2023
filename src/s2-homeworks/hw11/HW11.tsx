@@ -16,7 +16,7 @@ function HW11() {
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
 
     const change = (event: Event, value: number | Array<number>) => {
-        if(Array.isArray(value)) {
+        if (Array.isArray(value)) {
             setValue1(value[0])
             setValue2(value[1])
         } else {
