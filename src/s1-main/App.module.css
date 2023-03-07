@@ -1,8 +1,9 @@
 .App {
     --header_height: 60px;
+    padding: 20px 60px;
 }
 .wrapper {
-    margin: 131px 70px 216px;
+    margin-top: 80px;
 }
 
 .hw {
@@ -13,5 +14,7 @@
     font-weight: 600;
     font-size: 22px;
     margin-bottom: 30px;
+
+    border-bottom: 3px solid #f9dd94;
 }
 
