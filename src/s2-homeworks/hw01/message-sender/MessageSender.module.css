@@ -7,11 +7,12 @@
 .textarea {
     border-radius: 20px;
     border-style: none;
-    resize: none;
     width: 976px;
+    max-height: 50px;
     padding: 10px;
     background-color: #c1c6f5;
-    outline : none
+    outline: none;
+    resize: none
 }
 
 .button {

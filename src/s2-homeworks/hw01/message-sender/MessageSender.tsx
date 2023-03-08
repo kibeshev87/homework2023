@@ -38,8 +38,8 @@ const MessageSender = (props: any) => {
     }
 
     const onKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-        // e.key === 'Enter' && e.shiftKey && addMessage()
-        e.key === 'Enter' && addMessage()
+        e.key === 'Enter' && e.shiftKey && addMessage()
+        // e.key === 'Enter' && addMessage()
     }
 
     return (
