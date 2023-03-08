@@ -67,7 +67,10 @@ const HW14 = () => {
 
     return (
         <div id={'hw14'} className={s2.wrapper}>
-            <div className={s2.hwTitle}>Homework #14</div>
+            <div className={s2.hwTitle}>
+                Homework #14
+                <p>Поиск на реальном сервере по совпадению первых символов</p>
+            </div>
 
             <div className={s2.hw}>
                 <SuperDebouncedInput

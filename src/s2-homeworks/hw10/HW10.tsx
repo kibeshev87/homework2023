@@ -28,7 +28,10 @@ const HW10 = () => {
 
     return (
         <div id={'hw10'} className={s2.wrapper}>
-            <div className={s2.hwTitle}>Homework #10</div>
+            <div className={s2.hwTitle}>
+                Homework #10
+                <p>Крутилка</p>
+            </div>
 
             <div className={s2.hw}>
                 {isLoading ? (

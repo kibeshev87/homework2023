@@ -31,29 +31,35 @@ export const message0: MessageType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Some NameSome NameSome Name',  // можно менять
+        name: 'Я',  // можно менять
     },
     message: {
-        text: 'мое сообщениемое сообщениемое сообщениемоесообщениемое', // можно менять
-        time: '22:00', // можно менять
+        text: 'Текст моего сообщения', // можно менять
+        time: new Intl.DateTimeFormat('ru', {timeStyle: 'short'}).format() // можно менять
     },
+    // time: new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format()
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Friend NameFriend NameFriend Name', // можно менять
+        name: 'Мой друг Брэд)', // можно менять
     },
     message: {
-        text: 'сообщение другамое сообщениемое сообщениемое', // можно менять
-        time: '22:00', // можно менять
+        text: 'Текст сообщения от моего друга', // можно менять
+        time: new Intl.DateTimeFormat('ru', {timeStyle: 'short'}).format() // можно менять
     },
+    // const stringTime = new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format(date)// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+
 }
 
 const HW1 = () => {
     return (
         <div id={'hw1'} className={s2.wrapper}>
-            <div className={s2.hwTitle}>Homework #1</div>
+            <div className={s2.hwTitle}>
+                Homework #1
+                <p>Попробуй отправить новое сообщение)</p>
+            </div>
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
                 <div>

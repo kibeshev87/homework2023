@@ -19,7 +19,10 @@ const HW6 = () => {
 
     return (
         <div id={'hw6'} className={s2.wrapper}>
-            <div className={s2.hwTitle}>Homework #6</div>
+            <div className={s2.hwTitle}>
+                Homework #6
+                <p>Работа с localStorage</p>
+            </div>
 
             {/*демонстрация возможностей компоненты:*/}
             <div className={s2.hw}>
