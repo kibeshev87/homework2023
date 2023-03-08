@@ -36,9 +36,10 @@ const HW14 = () => {
             .then((res) => {
                 // делает студент
 
-                // сохранить пришедшие данные
+                res && setTechs(res.data.techs)
+                setLoading(false)
 
-                //
+                // сохранить пришедшие данные
             })
     }
 
@@ -47,7 +48,7 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
+        setSearchParams(value)
 
         //
     }
@@ -65,7 +66,7 @@ const HW14 = () => {
     ))
 
     return (
-        <div id={'hw14'}>
+        <div id={'hw14'} className={s2.wrapper}>
             <div className={s2.hwTitle}>Homework #14</div>
 
             <div className={s2.hw}>

@@ -188,21 +188,17 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                debugger
                     if (e.response.status === 400) {
-                        debugger
                         setCode('Ошибка 400!')
                         setImage(error400)
                         setText(e.response.data.errorText)
                         setInfo(e.response.data.info)
                     } else if (e.response.status === 500) {
-                        debugger
                         setCode('Ошибка 500!')
                         setImage(error500)
                         setText(e.response.data.errorText)
                         setInfo(e.response.data.info)
                     } else {
-                        debugger
                         setCode('Error!')
                         setImage(errorUnknown)
                         setText(e.message)
