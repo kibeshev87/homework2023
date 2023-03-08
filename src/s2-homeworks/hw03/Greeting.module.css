@@ -19,6 +19,7 @@
     width: 372px;
     height: 36px;
     margin: 10px 0;
+    outline: none
 }
 
 .input:focus {

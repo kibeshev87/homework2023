@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react'
-import { message0 } from '../HW1'
+import React, {ChangeEvent, KeyboardEvent, useEffect, useRef, useState} from 'react'
+import {message0} from '../HW1'
 import s from './MessageSender.module.css'
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
@@ -9,7 +9,7 @@ const MessageSender = (props: any) => {
     const [messages, setMessages] = useState<any[]>([])
     const [text, setText] = useState<any>('')
 
-    const onChange = (e: any) => {
+    const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setText(e.currentTarget.value)
     }
 
@@ -21,28 +21,31 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
-        setMessages([
-            ...messages,
-            {
-                id: messages.length ? messages.length + 1 : 1,
-                user: message0.user,
-                message: {
-                    text,
-                    time: new Date().toTimeString().slice(0, 5),
+        if (text.trim() !== '') {
+            setMessages([
+                ...messages,
+                {
+                    id: messages.length ? messages.length + 1 : 1,
+                    user: message0.user,
+                    message: {
+                        text: text.trim(),
+                        time: new Date().toTimeString().slice(0, 5),
+                    },
                 },
-            },
-        ])
-        setTimeout(() => setText(''), 4)
+            ])
+            setTimeout(() => setText(''), 4)
+        }
     }
 
-    const onKeyDown = (e: any) => {
-        e.key === 'Enter' && e.shiftKey && addMessage()
+    const onKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+        // e.key === 'Enter' && e.shiftKey && addMessage()
+        e.key === 'Enter' && addMessage()
     }
 
     return (
         <>
             {messages.map((m) => (
-                <M key={'message' + m.id} message={m} />
+                <M key={'message' + m.id} message={m}/>
             ))}
 
             <div id={'hw1-send-message-form'} className={s.sendForm}>
