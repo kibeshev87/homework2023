@@ -171,8 +171,6 @@ const HW13 = () => {
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
                 : "https://samurai.it-incubator.io/api/3.0/homework/test"
 
-                // : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
-
         setCode('')
         setImage('')
         setText('')
@@ -185,8 +183,6 @@ const HW13 = () => {
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
-                // дописать
-
 
             })
             .catch((e) => {
@@ -206,7 +202,6 @@ const HW13 = () => {
                         setText(e.message)
                         setInfo(e.name)
                     }
-                    // дописать
                 }
             )
     }
