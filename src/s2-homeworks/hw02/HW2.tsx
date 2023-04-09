@@ -41,16 +41,13 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     let afterFilterAffairs = affairs
     if(filter === 'high'){
         afterFilterAffairs = affairs.filter(el => el.priority === filter)
-        console.log(afterFilterAffairs)
     }
     if(filter === 'low'){
         afterFilterAffairs = affairs.filter(el => el.priority === filter)
-        console.log(afterFilterAffairs)
 
     }
     if(filter === 'middle'){
         afterFilterAffairs = affairs.filter(el => el.priority === filter)
-        console.log(afterFilterAffairs)
 
     }
 
