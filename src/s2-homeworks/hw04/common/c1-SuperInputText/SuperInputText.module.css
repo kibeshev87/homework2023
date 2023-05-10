@@ -1,12 +1,5 @@
-.input:focus {/*
-    border-radius: 5px;
-    border: 1px solid red;
-    width: 300px;
-    padding: 10px;
-    background-color: red;*/
-    /*border-style: none;
-    width: 350px;
-    padding: 10px;*/
+.input:focus {
+
 }
 
 .input {
@@ -25,19 +18,15 @@
 }
 
 .superInput {
-   /* border-radius: 5px;
-    border: 1px solid red;
-    width: 300px;
-    padding: 10px;*/
 
 }
 
 .errorInput {
-    /*border: 1px solid red;*/
+
 }
 
 .errorInput:focus {
-    /*border: 1px solid red;*/
+
 }
 
 .error {

@@ -13,7 +13,6 @@ const HW6 = () => {
         saveState<string>('hw6-editable-span-value', value)
     }
     const restore = () => {
-        // делают студенты
         setValue(restoreState<string>('hw6-editable-span-value', ''))
         }
 
@@ -24,7 +23,6 @@ const HW6 = () => {
                 <p>Работа с localStorage</p>
             </div>
 
-            {/*демонстрация возможностей компоненты:*/}
             <div className={s2.hw}>
                 <div className={s.editableSpanContainer}>
                     <SuperEditableSpan

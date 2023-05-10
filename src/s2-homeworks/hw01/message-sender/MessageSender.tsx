@@ -39,7 +39,6 @@ const MessageSender = (props: any) => {
 
     const onKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
         e.key === 'Enter' && e.shiftKey && addMessage()
-        // e.key === 'Enter' && addMessage()
     }
 
     return (
@@ -64,12 +63,9 @@ const MessageSender = (props: any) => {
                 <button
                     id={'hw1-button'}
                     className={s.button}
-
                     onClick={addMessage}
                 >
-                    {/*текст кнопки могут изменить студенты*/}
                     Send
-                    {/**/}
                 </button>
             </div>
         </>

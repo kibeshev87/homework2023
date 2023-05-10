@@ -26,6 +26,7 @@
     line-height: 1.5;
 
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .button:hover {

@@ -1,5 +1,5 @@
 .radio {
-
+    cursor: pointer;
 }
 
 .radio::before {

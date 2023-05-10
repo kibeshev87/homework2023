@@ -5,7 +5,6 @@ import s from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
-    // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
 
@@ -35,12 +34,12 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format(date)// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringTime = new Intl.DateTimeFormat('ru', {timeStyle: 'medium'}).format(date)
 
     const stringDate = new Intl.DateTimeFormat('ru', {dateStyle: "short"}).format(date) // день.месяц.год (01.02.2022)
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = new Intl.DateTimeFormat('en', {weekday: 'long'}).format(date) // пишут студенты
-    const stringMonth = new Intl.DateTimeFormat('en', {month: 'long'}).format(date) // пишут студенты
+    const stringDay = new Intl.DateTimeFormat('en', {weekday: 'long'}).format(date)
+    const stringMonth = new Intl.DateTimeFormat('en', {month: 'long'}).format(date)
 
     return (
         <div className={s.clock}>
@@ -74,14 +73,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={show} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={show}
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={!show} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!show}
                     onClick={stop}
                 >
                     stop
